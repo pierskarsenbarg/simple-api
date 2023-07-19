@@ -19,7 +19,7 @@ const lambda = new aws.lambda.CallbackFunction("simpleApiLambda", {
 
 const apigw = new aws.apigatewayv2.Api("httpApi", {
     protocolType: "HTTP",
-    routeKey: "POST /",
+    routeKey: "GET /",
     target: lambda.invokeArn
 });
 
